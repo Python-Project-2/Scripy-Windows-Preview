@@ -22,36 +22,44 @@
 
 ## 🖼️ Preview Gallery
 
-<p align="center">
-  <img src="screenshots/panel-overview.png" width="80%" alt="Scripy Preview main panel" />
-</p>
-<p align="center"><em>The main Scripy Preview panel inside VS Code — device selector, Run / Stop buttons, dock window options, theme selector, and live device frame preview.</em></p>
-
-<p align="center">
-  <img src="screenshots/theme-selector.png" width="80%" alt="Theme selector dropdown" />
-</p>
-<p align="center"><em>Built-in theme selector with Auto, iPhone, Android, and Custom categories — including iPhone 16 Pro Max, Pixel 9 Pro, Galaxy S24 Ultra, and more.</em></p>
-
-<p align="center">
-  <img src="screenshots/customize-panel.png" width="80%" alt="Customize panel" />
-</p>
-<p align="center"><em>Customize panel — set device name, screen dimensions, bezel, corner radius, body color, accent color, cutout style, and panel style.</em></p>
-
-<p align="center">
-  <img src="screenshots/tools-options-log.png" width="80%" alt="Tools, Options, and Log sections" />
-</p>
-<p align="center"><em>Tools section (navigation, screenshot, APK install, file transfer), Options section (audio, recording, max FPS / bitrate), and a real-time log panel.</em></p>
-
-<p align="center">
-  <img src="screenshots/dev-tools-shortcuts.png" width="80%" alt="Dev tools and keyboard shortcuts" />
-</p>
-<p align="center"><em>Dev Tools selector for Flutter, Node/RN, Java/Kotlin, Python, .NET/C#, Go, and Rust — plus the full set of keyboard shortcuts.</em></p>
-
-<p align="center">
-  <img src="screenshots/project-structure.png" width="80%" alt="Project folder structure" />
-</p>
-<p align="center"><em>Project folder structure showing the <code>model/</code> directory with platform-specific <code>scrcpy</code> and <code>adb</code> binaries for Windows, macOS, and Linux.</em></p>
-
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="screenshots/panel-overview.png" width="200" alt="Scripy Preview main panel" /><br><br>
+      <b>Panel Utama Scripy</b><br>
+      <sub>Tampilan panel utama di dalam VS Code — pemilih perangkat, tombol Run/Stop, opsi dock window, pemilih tema, dan live device frame preview.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="screenshots/theme-selector.png" width="200" alt="Theme selector dropdown" /><br><br>
+      <b>Pemilih Tema</b><br>
+      <sub>Dropdown tema bawaan dengan kategori Auto, iPhone, Android, dan Custom — mencakup iPhone 16 Pro Max, Pixel 9 Pro, Galaxy S24 Ultra, dll.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="screenshots/customize-panel.png" width="200" alt="Customize panel" /><br><br>
+      <b>Panel Kustomisasi</b><br>
+      <sub>Atur nama perangkat, dimensi layar, bezel, corner radius, warna bodi, warna aksen, gaya cutout, dan gaya panel.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="screenshots/tools-options-log.png" width="200" alt="Tools, Options, and Log sections" /><br><br>
+      <b>Tools, Options & Log</b><br>
+      <sub>Fitur navigasi, screenshot, instal APK, transfer file, opsi audio/rekaman/FPS, dan panel log real-time.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="screenshots/dev-tools-shortcuts.png" width="200" alt="Dev tools and keyboard shortcuts" /><br><br>
+      <b>Dev Tools & Shortcuts</b><br>
+      <sub>Dukungan Dev Tools (Flutter, Node/RN, Java/Kotlin, Python, .NET/C#, Go, Rust) serta daftar pintasan keyboard.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="screenshots/project-structure.png" width="200" alt="Project folder structure" /><br><br>
+      <b>Struktur Folder Proyek</b><br>
+      <sub>Direktori <code>model/</code> berisi biner <code>scrcpy</code> dan <code>adb</code> lintas platform (Windows, macOS, Linux).</sub>
+    </td>
+  </tr>
+</table>
 ---
 
 ## ✨ Key Features
