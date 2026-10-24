@@ -16,14 +16,48 @@
 
 ## 📖 About the Extension
 
-**Scripy Preview** is a VS Code extension that wraps [scrcpy](https://github.com/Genymobile/scrcpy) and ships the required binaries inside the package, so you can start using it right away without manually installing any additional tools.
+**Scripy Preview** is a VS Code extension that wraps [scrcpy](https://github.com/Genymobile/scrcpy) and ships the required binaries inside the package, so you can start using it right away without manually installing any additional tools. The extension turns VS Code into a powerful Android mirroring and control station, complete with theming, custom device frames, built-in developer shortcuts, and a one-click wireless workflow.
+
+---
+
+## 🖼️ Preview Gallery
+
+<p align="center">
+  <img src="screenshots/panel-overview.png" width="80%" alt="Scripy Preview main panel" />
+</p>
+<p align="center"><em>The main Scripy Preview panel inside VS Code — device selector, Run / Stop buttons, dock window options, theme selector, and live device frame preview.</em></p>
+
+<p align="center">
+  <img src="screenshots/theme-selector.png" width="80%" alt="Theme selector dropdown" />
+</p>
+<p align="center"><em>Built-in theme selector with Auto, iPhone, Android, and Custom categories — including iPhone 16 Pro Max, Pixel 9 Pro, Galaxy S24 Ultra, and more.</em></p>
+
+<p align="center">
+  <img src="screenshots/customize-panel.png" width="80%" alt="Customize panel" />
+</p>
+<p align="center"><em>Customize panel — set device name, screen dimensions, bezel, corner radius, body color, accent color, cutout style, and panel style.</em></p>
+
+<p align="center">
+  <img src="screenshots/tools-options-log.png" width="80%" alt="Tools, Options, and Log sections" />
+</p>
+<p align="center"><em>Tools section (navigation, screenshot, APK install, file transfer), Options section (audio, recording, max FPS / bitrate), and a real-time log panel.</em></p>
+
+<p align="center">
+  <img src="screenshots/dev-tools-shortcuts.png" width="80%" alt="Dev tools and keyboard shortcuts" />
+</p>
+<p align="center"><em>Dev Tools selector for Flutter, Node/RN, Java/Kotlin, Python, .NET/C#, Go, and Rust — plus the full set of keyboard shortcuts.</em></p>
+
+<p align="center">
+  <img src="screenshots/project-structure.png" width="80%" alt="Project folder structure" />
+</p>
+<p align="center"><em>Project folder structure showing the <code>model/</code> directory with platform-specific <code>scrcpy</code> and <code>adb</code> binaries for Windows, macOS, and Linux.</em></p>
 
 ---
 
 ## ✨ Key Features
 
-- **Ready to Use**: `scrcpy` and `adb` binaries are bundled inside the extension (`model/`).
-- **Automatic OS Detection**: Windows (`model/win/`), macOS (`model/mac/`), and Linux (`model/linux/`).
+- **Ready to Use**: `scrcpy` and `adb` binaries are bundled inside the extension (`model/`), so there is nothing to install manually.
+- **Automatic OS Detection**: Windows (`model/win/`), macOS (`model/mac/`), and Linux (`model/linux/`) are all detected automatically at runtime.
 - **Splash Icon**: Displays a custom splash icon when the panel is opened, before `scrcpy` is launched.
 - **Hassle-Free Wireless**:
   - Connect once via USB, and the extension automatically enables Wi-Fi mode and saves the device.
@@ -31,10 +65,14 @@
   - Android 11+ pairing (*Wireless debugging*) via the **Pair** button.
   - Manual connection by IP address using the **Add IP** button.
 - **Dock Window**: The `scrcpy` window can be docked to the left, right, or float freely (*Free*).
-- **Built-in Tools**: Navigation buttons (Back, Home, Recents, Power, Volume), Screenshot, Install APK, Send file, and Restart ADB.
-- **Comprehensive Options**: Audio, stay awake, turn phone screen off, show touches, view only, borderless, always on top, max size, max FPS, bitrate, and recording.
+- **Device Themes & Frames**: A rich built-in theme selector lets you wrap the mirrored screen in realistic frames for iPhone (16 Pro Max, 16 Pro, 16/15, 14/13 Notch, SE), Android (Pixel 9 Pro, Pixel 8, Galaxy S24 Ultra / S24 / A54, Xiaomi 14, OnePlus 12, Generic 16:9), or a fully **Custom** frame.
+- **Custom Device Frames**: Define your own device — name, screen width/height, bezel %, corner radius %, body color, accent color, cutout style (notch, punch-hole, none), and panel style.
+- **Built-in Tools**: Navigation buttons (Back, Home, Recents, Power, Volume Up/Down), Screenshot, Install APK, Send file, Open folder, and Restart ADB.
+- **Dev Tools Integration**: Quickly toggle developer profiles for **Flutter, Node/React Native, Java/Kotlin, Python, .NET/C#, Go, and Rust** — useful for launching the matching dev workflow from the same panel.
+- **Keyboard Shortcuts**: Run/Stop, open panel, screenshot, install APK, Home/Back/Recents, theme switcher, and tool picker — all bound to convenient `Ctrl+Alt+` combinations.
+- **Comprehensive Options**: Audio forwarding, stay awake, turn phone screen off, show touches, view only, borderless window, always on top, max size, max FPS, bitrate, and recording to `.mkv`.
 - **Multi-Device Support**: Easily switch between devices using an auto-updated dropdown.
-- **Persistent Settings**: All preferences and selections are remembered for the next session.
+- **Persistent Settings**: All preferences, themes, custom frames, and selections are remembered for the next session.
 
 ---
 
@@ -75,11 +113,75 @@
 | Section | Function |
 | :--- | :--- |
 | **Device** | Select device, refresh, *USB → Wi-Fi*, *Pair*, *Add IP*, and *Forget*. |
-| **Run / Stop** | Start or stop the `scrcpy` process. |
-| **Dock Window** | Set window position (*Left*, *Free*, *Right*). |
+| **Run / Stop** | Start or stop the `scrcpy` process. Status indicator shows `Ready.` / `Running.` / etc. |
+| **Dock Window** | Set window position — *Left*, *Free*, or *Right*. |
+| **Theme** | Choose a device frame: Auto, iPhone, Android, or Custom. |
+| **Customize** | Configure custom device name, screen width/height, bezel %, corner radius %, body color, accent color, cutout style, and panel style. |
+| **Dev Tools** | Toggle language/framework profiles: Flutter, Node/RN, Java/Kotlin, Python, .NET/C#, Go, Rust. |
 | **Tools** | Navigation buttons, *Screenshot*, *Install APK*, *Send file*, *Open folder*, and *Restart ADB*. |
-| **Options** | Advanced `scrcpy` options and wireless configuration. |
+| **Options** | Advanced `scrcpy` options (audio, recording, max size, FPS, bitrate, etc.) and wireless configuration. |
 | **Log** | Real-time output from `scrcpy` and `adb`. |
+
+---
+
+## 🎨 Themes & Custom Frames
+
+The **Theme** dropdown groups available frames into four categories:
+
+| Category | Available Frames |
+| :--- | :--- |
+| **Auto** | Auto (match phone) |
+| **iPhone** | iPhone 16 Pro Max, iPhone 16 Pro, iPhone 16 / 15, iPhone 14 / 13 (Notch), iPhone SE (Home button) |
+| **Android** | Google Pixel 9 Pro, Pixel 8, Samsung Galaxy S24 Ultra / S24 / A54, Xiaomi 14, OnePlus 12, Android Generic (16:9) |
+| **Custom** | Fully user-defined frame via the **Customize** panel |
+
+### Customize Panel Options
+
+| Setting | Description |
+| :--- | :--- |
+| **Name** | Display name of the custom device (e.g. `iPhone 16 Pro`). |
+| **Screen width** | Frame internal screen width in pixels (e.g. `1320`). |
+| **Screen height** | Frame internal screen height in pixels (e.g. `2868`). |
+| **Bezel (%)** | Frame border thickness as a percentage of the screen (e.g. `3`). |
+| **Corner radius (%)** | Rounded corner radius as a percentage (e.g. `13`). |
+| **Body color** | Solid color of the device body. |
+| **Use accent color** | When enabled, accent color is applied to highlights instead of body color. |
+| **Accent color** | Secondary highlight color. |
+| **Cutout** | Screen cutout style: *Notch*, *Punch-hole*, or *None*. |
+| **Panel style** | Visual style of the surrounding panel (e.g. `VS Code`). |
+| **Live phone screen inside frame** | Renders the live mirrored screen directly inside the device frame in the panel. |
+| **Save Custom / Delete** | Save the current frame as a new theme, or delete an existing custom one. |
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Action | Shortcut |
+| :--- | :--- |
+| Run script | `Ctrl + Alt + M` |
+| Stop script | `Ctrl + Alt + X` |
+| Open panel | `Ctrl + Alt + O` |
+| Screenshot | `Ctrl + Alt + P` |
+| Install APK | `Ctrl + Alt + I` |
+| Home | `Ctrl + Alt + H` |
+| Back | `Ctrl + Alt + B` |
+| Recents | `Ctrl + Alt + R` |
+| Switch theme | `Ctrl + Alt + T` |
+| Tool picker | `Ctrl + Alt + L` |
+
+---
+
+## 🧰 Dev Tools Profiles
+
+The **Dev Tools** section lets you bind the panel to a specific technology stack so the tools panel adapts to your active workflow. All supported profiles can be enabled simultaneously:
+
+- 🟢 **Flutter**
+- 🟢 **Node / React Native**
+- 🟢 **Java / Kotlin**
+- 🟢 **Python**
+- 🟢 **.NET / C#**
+- 🟢 **Go**
+- 🟢 **Rust**
 
 ---
 
@@ -96,8 +198,8 @@
 | **Show touches** | Displays touch points on the screen. |
 | **View only** | Mirrors the screen without touch control. |
 | **Borderless window** | Removes the window frame of `scrcpy`. |
-| **Record** | Records the screen to the `~/Scripy` directory (`.mkv` format). |
-| **Max size / Max FPS / Bitrate** | Limits resolution, frame rate, and video quality. |
+| **Record to ~/Scripy (.mkv)** | Records the screen to the `~/Scripy` directory in `.mkv` format. |
+| **Max size / Max FPS / Bitrate** | Limits resolution, frame rate, and video quality (defaults: `auto` / `auto` / `8M`). |
 
 *Changes to dock position and options will be applied on the next Run session.*
 
@@ -135,9 +237,10 @@ Screenshots and video recordings are automatically saved to the **`Scripy`** fol
 ├── dist/               # Compiled script output
 ├── icon/               # Splash and extension icons
 ├── model/
-│   ├── win/            # scrcpy.exe, adb.exe, DLLs, scrcpy-server
-│   ├── mac/            # scrcpy, adb, scrcpy-server
-│   └── linux/          # scrcpy, adb, scrcpy-server
+│   ├── win/            # scrcpy.exe, adb.exe, DLLs (avcodec-61, avformat-61, SDL2, libusb-1.0, ...), scrcpy-server
+│   ├── mac/            # scrcpy, adb, scrcpy-server, scrcpy.1
+│   └── linux/          # scrcpy, adb, scrcpy-server, scrcpy.1
+├── node_modules/       # NPM dependencies
 ├── src/extension.ts    # Main extension code
 └── package.json
 ```
